@@ -51,12 +51,12 @@ body{
     margin: 0px 5px;
 }
 
-#wt{
+.wind > .building {
     margin: 5px;
     background-image: url("img/wt.png");
 }
 
-#sl{
+.solar > .building {
     margin: 5px;
     background-image: url("img/foto.png")
 }

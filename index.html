@@ -9,49 +9,19 @@
     <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
 </head>
 <body>
-    <div class="topStat">
-            <div class="columns">
-                <div class="money"></div>
-                <div class="priceElectricty"></div>
-                <div class="priceGreenCer"></div>
+    <div id="app">
+        <stats v-bind:stats="stats"></stats>
+        <div class="cointeiner">
+            <div class="rows">
+                <building
+                    v-for="building in buildings"
+                    v-bind:building="building"
+                    v-bind:key="building.name"
+                ></building>
             </div>
-            <div class="columns">
-                <div class="electricty"></div>
-                <button class="sellElectricty">Sell</button>
-            </div>
-            <div class="columns">
-                <div class="greenCer"></div>
-                <button class="sellgreenCer">Sell</button>
-            </div>
-    </div>
-    <div class="cointeiner">
-        <div class="rows">
-            <div class="columns">
-                <div class="wind" class="columns">
-                    <div id="wt" class="building"></div>
-                    <div class="stat"><span>Buildings: </span><span class="buildings"></span></div>
-                    <div class="stat"><span>Level: </span><span class="level"></span></div>
-                    <div class="stat"><span>Production: </span><span class="production"></span></div>
-                    <div class="stat"><span>Build price: </span><span class="buildPrice"></span></div>
-                    <div class="stat"><span>Upgrade price: </span><span class="upgradePrice"></span></div>
-                    <div class="stat"><button class="build">Build</button><button class="upgrade">Upgrade</button></div>
-                </div>
-            </div>
-            <div class="columns">
-                <div class="solar" class="columns">
-                    <div id="sl" class="building"></div>
-                    <div class="stat"><span>Buildings: </span><span class="buildings"></span></div>
-                    <div class="stat"><span>Level: </span><span class="level"></span></div>
-                    <div class="stat"><span>Production: </span><span class="production"></span></div>
-                    <div class="stat"><span>Build price: </span><span class="buildPrice"></span></div>
-                    <div class="stat"><span>Upgrade price: </span><span class="upgradePrice"></span></div>
-                    <div class="stat"><button class="build">Build</button><button class="upgrade">Upgrade</button></div>
-                </div>
-            </div>
-            <div class="columns"></div>
         </div>
     </div>
-    <div id="alert" class="close">Tekst!</div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script type="text/javascript" src='js/main.js'></script>
 </body>
 </html>
